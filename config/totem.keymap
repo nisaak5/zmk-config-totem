@@ -67,20 +67,6 @@
             timeout-ms = <70>;
             require-prior-idle-ms = <100>;
         };
-
-        russian_letter_ {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <8 9>;
-            timeout-ms = <20>;
-            require-prior-idle-ms = <100>;
-        };
-
-        russian_letter_x {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <8 7>;
-            require-prior-idle-ms = <100>;
-            timeout-ms = <20>;
-        };
     };
 
     behaviors {
@@ -198,8 +184,8 @@
 
             bindings = <
                                &kp Q  &kp W                  &kp E            &kp R                    &kp T        &kp Y    &kp U                     &kp I             &kp O                   &kp P
-                               &kp A  &mt_shift_left LALT S  &mt_left LGUI D  &mt_shift_left LSHIFT F  &kp G        &kp H    &mt_shift_right LSHIFT J  &mt_right LGUI K  &mt_shift_right LALT L  &kp SEMICOLON
-&mt_all LEFT_CONTROL CAPSLOCK  &kp Z  &kp X                  &kp C            &kp V                    &kp B        &kp N    &kp M                     &kp COMMA         &kp DOT                 &kp FSLH       &mt_all RCTRL DE_SQT
+                               &kp A  &mt_shift_left LALT S  &mt_left LGUI D  &mt_shift_left LSHIFT F  &kp G        &kp H    &mt_shift_right LSHIFT J  &mt_right LGUI K  &mt_shift_right LALT L  &kp DE_O_UMLAUT
+&mt_all LEFT_CONTROL CAPSLOCK  &kp Z  &kp X                  &kp C            &kp V                    &kp B        &kp N    &kp M                     &kp DE_COMMA      &kp DE_DOT              &kp DE_MINUS     &mt_all RCTRL DE_A_UMLAUT
                                                              &kp BACKSPACE    &lt 1 TILDE              &kp SPACE    &kp TAB  &lt 2 GRAVE               &kp DELETE
             >;
         };
@@ -223,10 +209,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &kp DE_GRAVE    &kp DE_MINUS    &kp UP          &kp DE_PLUS      &kp DE_LEFT_BRACE          &kp DE_RIGHT_BRACE        &kp N7        &kp N8        &kp N9        &kp EQUAL
-              &trans          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp DE_LEFT_BRACKET        &kp DE_RIGHT_BRACKET      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DE_MINUS
-&kp DE_TILDE  &kp DE_SHARP_S  &kp PG_UP       &kp LG(DOWN)    &kp PG_DN        &kp DE_LEFT_PARENTHESIS    &kp DE_RIGHT_PARENTHESIS  &kp NUMBER_1  &kp N2        &kp N3        &kp KP_MULTIPLY  &trans
-                                              &trans          &trans           &trans                     &kp DE_PERIOD             &kp N0        &kp KP_COMMA
+                &trans  &kp DE_MINUS    &kp UP          &kp DE_PLUS      &kp DE_LEFT_BRACE          &kp DE_RIGHT_BRACE        &kp N7        &kp N8        &kp N9        &kp EQUAL
+                &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp DE_LEFT_BRACKET        &kp DE_RIGHT_BRACKET      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_DIVIDE
+&kp DE_SHARP_S  &trans  &kp PG_UP       &kp LG(DOWN)    &kp PG_DN        &kp DE_LEFT_PARENTHESIS    &kp DE_RIGHT_PARENTHESIS  &kp NUMBER_1  &kp N2        &kp N3        &kp KP_MULTIPLY  &kp DE_U_UMLAUT
+                                        &trans          &trans           &trans                     &kp DE_PERIOD             &kp N0        &kp KP_COMMA
             >;
         };
 
@@ -249,10 +235,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp DE_EXCL  &kp DE_AT_SIGN  &kp DE_HASH  &kp DLLR       &kp DE_PERCENT          &kp DE_CARET  &kp DE_AMPERSAND  &kp DE_ASTERISK  &kp DE_SQT  &kp DE_DQT
-                &kp RA(A)    &trans          &trans       &trans         &trans                  &kp C_MUTE    &kp PRINTSCREEN   &trans           &trans      &kp RA(O)
-&studio_unlock  &kp RA(F18)  &trans          &trans       &kp C_BRI_DEC  &kp C_BRIGHTNESS_INC    &kp C_VOL_DN  &kp C_VOL_UP      &kp C_PREV       &kp C_NEXT  &kp DE_BSLH  &trans
-                                             &trans       &trans         &mo 3                   &trans        &kp C_PP          &trans
+                &kp DE_EXCL  &kp DE_DQT  &kp DE_SECTION  &kp DE_DLLR    &kp DE_PERCENT          &kp DE_AMPERSAND  &kp DE_SLASH  &kp DE_EQUAL  &kp DE_QUESTION  &kp DE_GRAVE
+                &kp DE_AT    &trans      &trans          &kp DE_EURO    &trans                  &kp C_VOL_DN      &kp C_MUTE    &kp C_VOL_UP  &trans           &kp DE_ACUTE
+&studio_unlock  &trans       &trans      &trans          &kp C_BRI_DEC  &kp C_BRIGHTNESS_INC    &kp C_PREV        &kp C_PP      &kp C_NEXT    &kp PSCRN        &kp DE_BSLH   &trans
+                                         &trans          &trans         &mo 3                   &trans            &trans        &trans
             >;
         };
 
